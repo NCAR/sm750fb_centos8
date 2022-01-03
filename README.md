@@ -68,7 +68,6 @@ a new kernel is installed. To allow use of DKMS, this repository provides a read
 
 #### Install DKMS
 Of course, the `dkms` package is required to use DKMS:
-
 ```bash
 $ sudo dnf install dkms
 ```
@@ -93,12 +92,15 @@ $ dkms status sm750fb_centos8
 sm750fb_centos8/4.18, 4.18.0-348.2.1.el8_5.x86_64, x86_64: installed
 ```
 #### Stop use of DKMS
-If desired, you can cancel use of DKMS and remove the automatically built `sm750fb` module(s) using the following command:
+If desired, you can cancel use of DKMS and remove the automatically built `sm750fb` module(s) using the following command.
 ```
 $ sudo dkms remove sm750fb_centos8/4.18
 ```
 
 ### Basic Installation
+A basic installation simply builds module `sm750fb` against the currently running kernel and
+installs the module. This process must be repeated any time a new kernel is installed.
+
 #### Clone, build, and install
 ```
 $ git clone https://github.com/NCAR/sm750fb_centos8.git
