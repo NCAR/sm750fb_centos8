@@ -30,7 +30,7 @@ $ sudo dnf install kernel-devel
 ## Configure for Use of Module
 The `sm750fb` module requires a `g_option` parameter containing the video details for the attached
 display. Since installing the module will also cause an immediate load of the module, a value for `g_option`
-should be set _before_ before performing the module installation below.
+should be set _before_ performing the module installation below.
 
 This configuration can be done either via a file under `/etc/modprobe.d` or via the kernel command line. See
 the `readme` file for details on the format for `g_option`. The examples below are for a 1920x1080 monitor
