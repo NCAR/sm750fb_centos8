@@ -93,6 +93,11 @@ Execute `dkms status` to verify the installation. You should see the line `sm750
 $ dkms status
 sm750fb_centos8/4.18, 4.18.0-348.2.1.el8_5.x86_64, x86_64: installed
 ```
+#### Stop use of DKMS
+If desired, you can cancel use of DKMS and remove the automatically built `sm750fb` module(s) using the following command:
+```
+$ sudo dkms remove sm750fb_centos8/4.18
+```
 
 ### Basic Installation
 #### Clone, build, and install
