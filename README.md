@@ -87,10 +87,9 @@ The dkms command above will:
  3. build and install the module against the current running kernel
 
 #### Verify
-Execute `dkms status` to verify the installation. You should see the line `sm750fb_centos8/4.18, 4.18.0-348.2.1.el8_5.x86_64, x86_64: installed` somewhere in the output.
-
+Execute `dkms status` to verify the installation. You should see a line of output as shown below.
 ```
-$ dkms status
+$ dkms status sm750fb_centos8
 sm750fb_centos8/4.18, 4.18.0-348.2.1.el8_5.x86_64, x86_64: installed
 ```
 #### Stop use of DKMS
