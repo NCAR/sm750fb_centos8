@@ -1,4 +1,4 @@
-# Silicon Motion SM750 driver module for CentOS 8
+# Silicon Motion SM750 Driver Module for CentOS 8
 This project provides a usable CentOS 8 driver for the the Silicon Motion SM750 display controller.
 Instructions below describe how to build and install the driver. See the [Background](#background) section at the
 end for details regarding the contents of this driver.
@@ -95,12 +95,11 @@ $ sudo -E make install  # Install as root. The -E is important here!
 ```
 
 ## Background
- While the Linux
-kernel source contains the necessary pieces for a functional driver, kernels built for CentOS 8 do not provide all
-of them. The easiest way I found to get a working driver was to extract the needed pieces from the kernel source tree
-and put them together in a way that can be built simply as an out-of-tree kernel module for CentOS 8.
+While the Linux kernel source contains the necessary pieces for a functional SM750 driver, kernels built for CentOS 8
+do not provide all of them. The easiest way I found to get a working driver was to extract the needed pieces from the
+kernel source treeand put them together in a way that can be built simply as an out-of-tree kernel module for CentOS 8.
 
-The assembled pieces are:
+The assembled pieces from the 4.18 Linux kernel are:
 * `drivers/staging/sm750fb`
 
   The `sm750fb` driver exists in the "staging" part of the Linux core kernel tree, but the driver is not built or provided
